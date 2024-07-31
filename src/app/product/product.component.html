@@ -3,33 +3,44 @@
   <div class="grid grid-cols-12">
     <div class="item col-span-4 p-3">
       <div class="product border shadow-lg">
-        <img src="../../assets/images/sleek-wirless.jpeg" class="w-full" alt="sleek-wirless">
+        <img [src]="products[0].productImage" class="w-full" alt="sleek-wirless">
         <div class="flex items-center justify-between px-3">
-          <p>sleek-wirless</p>
+          <p>{{products[0].productName}}</p>
           <span class="p-4 mt-3 py-2 bg-blue-600 hover:bg-blue-700 text-white">add to card</span>
         </div>
-        <span class="text-blue-500 ps-3">13$</span>
-      </div>
-    </div>
-    <div class="item col-span-4 p-3">
-      <div class="product border shadow-lg">
-        <img src="../../assets/images/sleekmodern-laptop.jpeg" class="w-full" alt="labtop">
         <div class="flex items-center justify-between px-3">
-          <p>sleekmodern-laptop</p>
-          <span class="p-4 mt-3 py-2 bg-blue-600 hover:bg-blue-700 text-white">add to card</span>
+          <span class="text-blue-500 ">{{ products[0].price }}$</span>
+          <span *ngIf="products[0].onSale" class="text-red-500">On Sale</span>
+          </div>
         </div>
-        <span class="text-blue-500 ps-3">150$</span>
       </div>
-    </div>
-    <div class="item col-span-4 p-3">
-      <div class="product border shadow-lg">
-        <img src="../../assets/images/smartWath.jpeg" class="w-full" alt="smartWatch">
-        <div class="flex items-center justify-between px-3">
-          <p>smart watch</p>
-          <span class="p-4 mt-3 py-2 bg-blue-600 hover:bg-blue-700 text-white">add to card</span>
+      <div class="item col-span-4 p-3">
+        <div class="product border shadow-lg">
+          <img [src]="products[1].productImage" class="w-full" alt="sleek-wirless">
+          <div class="flex items-center justify-between px-3">
+            <p>{{products[1].productName }}</p>
+            <span class="p-4 mt-3 py-2 bg-blue-600 hover:bg-blue-700 text-white">add to card</span>
+          </div>
+          <div class="flex items-center justify-between px-3">
+            <span class="text-blue-500 ">{{ products[1].price }}$</span>
+            <span *ngIf="products[1].onSale" class="text-red-500">On Sale</span>
+            </div>
+          </div>
         </div>
-        <span class="text-blue-500 ps-3 ">80$</span>
-      </div>
-    </div>
-  </div>
+        <div class="item col-span-4 p-3">
+          <div class="product border shadow-lg">
+            <img [src]="products[2].productImage" class="w-full" alt="sleek-wirless">
+            <div class="flex items-center justify-between px-3">
+              <p>{{products[2].productName }}</p>
+              <span class="p-4 mt-3 py-2 bg-blue-600 hover:bg-blue-700 text-white">add to card</span>
+            </div>
+            <div class="flex items-center justify-between px-3">
+              <span class="text-blue-500 ">{{ products[2].price }}$</span>
+              <span *ngIf="products[2].onSale" class="text-red-500">On Sale</span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
 </section>

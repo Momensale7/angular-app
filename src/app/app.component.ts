@@ -5,7 +5,6 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,4 +14,5 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 })
 export class AppComponent {
   title = 'app1';
+
 }
