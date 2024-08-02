@@ -1,0 +1,12 @@
+
+        <div class="product border shadow-lg">
+          <img [src]="product.productImage" class="w-full h-[300px]" alt="sleek-wirless">
+          <div class="flex items-center justify-between px-3">
+            <p>{{product.productName}}</p>
+            <span class="p-4 mt-3 py-2 bg-blue-600 hover:bg-blue-700 text-white">add to card</span>
+          </div>
+          <div class="flex items-center justify-between px-3">
+            <span class="text-blue-500 ">{{ product.price }}$</span>
+            <span *ngIf="product.onSale" class="text-red-500">On Sale</span>
+            </div>
+          </div>

@@ -1,20 +1,16 @@
+import { Product } from './../product';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-interface product {
-  productImage:string,
-   productName:string,
-   price:number,
-   onSale:boolean
-}
+import { ProductCardComponent } from '../product-card/product-card.component';
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,ProductCardComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
-products:product[] =[
+products:Product[] =[
   {productImage:"../../assets/images/sleek-wirless.jpeg",
    productName:"sleek-wirless",
    price:13,
